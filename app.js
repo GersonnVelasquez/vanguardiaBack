@@ -5,6 +5,7 @@ var cors = require('cors')
 
 //Ejecutar Express
 var app = express();
+app.use(express.static("public"))
 app.use(cors())
 
 
