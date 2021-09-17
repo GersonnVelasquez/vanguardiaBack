@@ -5,7 +5,6 @@ var cors = require('cors')
 
 //Ejecutar Express
 var app = express();
-app.use(express.static("public"))
 app.use(cors())
 
 
@@ -18,6 +17,10 @@ var seccion_routes = require('./routes/seccion');
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.json());
+
+app.get("/", function(req, res) {
+    res.send("Hola Mundo");
+  });
 
 //Carga Rutas
 app.use('/api', colegio_routes);
