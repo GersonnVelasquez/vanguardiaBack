@@ -2,7 +2,7 @@
 
 var mongoose = require("mongoose");
 var app = require("./app");
-var port = 3900;
+var port = process.env.PORT || 3000;
 require("dotenv").config();
 
 // mongoose.set('useFindAndModify', false);
