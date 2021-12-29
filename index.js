@@ -7,7 +7,7 @@ require("dotenv").config();
 
 // mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://adminVanguardia:pass123@cluster0.lt8fs.mongodb.net/Vanguardia?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://localhost:27017/adminVanguardia', { useNewUrlParser: true }).then(() => {
   console.log("Conexion a la BD bien!!");
 
   app.listen(port, () => {
